@@ -1,0 +1,101 @@
+.footer {
+  background-color: $black;
+  padding: 4rem 0;
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.footer_links-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include phone {
+    flex-direction: column;
+    gap: 3.6rem;
+  }
+}
+
+.footer_nav {
+  align-items: start;
+}
+
+.footer_nav-list {
+  @include phone {
+    flex-direction: column;
+    gap: 2rem;
+
+    & a {
+      @include underline;
+    }
+  }
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & a,
+  address {
+    justify-content: end;
+    font-style: normal;
+  }
+
+  & .address img {
+    margin-top: 0.4rem;
+  }
+
+  @include phone {
+
+    & a,
+    address {
+      justify-content: start;
+      @include underline;
+    }
+
+    & .address span {
+      text-align: start;
+    }
+  }
+}
+
+.footer_btn {
+  max-width: 19rem;
+
+  @include phone {
+    max-width: 100%;
+  }
+}
+
+.footer_policy-iskra-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  & span {
+    color: $white;
+  }
+
+  & .button-iskra {
+    margin-left: auto;
+  }
+
+  @include phone {
+    flex-direction: column;
+    align-items: start;
+    gap: 1.6rem;
+
+    & .privacy-policy-link {
+      @include underline;
+    }
+
+    & .button-iskra {
+      margin-left: 0;
+    }
+  }
+}

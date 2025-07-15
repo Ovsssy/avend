@@ -1,0 +1,80 @@
+.link{
+  display: flex;
+  gap: 1.2rem;
+
+  & svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  & span {
+    font-style: normal;
+    transition: all $duration;
+  }
+}
+
+.contact-link {
+  color: $white;
+
+  &:hover {
+    & span {
+      color: $light_violet;
+    }
+
+    & svg {
+      & path {
+        fill: $light_violet;
+      }
+    }
+  }
+}
+
+.link__black{
+  color: $black;
+}
+
+.address {
+  color: $white;
+
+  & span {
+    display: block;
+    max-width: 24.5rem;
+    text-align: end;
+  }
+
+  & img {
+    width: 1.2rem;
+    height: 1.6rem;
+  }
+}
+
+.navigation_list a {
+  
+  &:hover {
+    color: $light_violet;
+  }
+
+  &.active {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    color: $light_violet;
+  }
+}
+
+.privacy-policy-link {
+  &:hover {
+    color: $light_violet;
+  }
+}
+
+.black-link{
+  color: $black;
+
+  &:hover{
+    color: $dark_violet;
+  }
+}

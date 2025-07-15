@@ -1,0 +1,104 @@
+.cases {
+  margin-bottom: 12rem;
+
+  @include phone {
+    margin-bottom: 10rem;
+  }
+}
+
+.cases_title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.cases_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;;
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.6rem;
+  }
+}
+
+.cases_item{
+  
+
+  @include tablet{
+    max-width: 40rem;
+    align-self: center;
+  }
+
+  @include phone {
+    width: 100%;
+  }
+}
+
+.cases_item-image-wrapper{
+  width: 100%;
+  height: 30rem;
+  margin-bottom: 1.6rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  @include phone {
+    height: 25.9rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.cases_item-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: transform $duration;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.cases_item-logo{
+  width: auto;
+  height: 3.2rem;
+  margin-bottom: 1.1rem;
+
+  @include phone {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.cases_item-tag-wrapper{
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+
+  @include phone {
+    margin-bottom: 1rem;
+  }
+}
+
+.cases_item-tag{
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+
+  & span {
+    color: $white;
+  }
+
+  &__vending{
+    background-color: $dark_violet;
+  }
+
+  &__mikromarket{
+    background-color: $new;
+  }
+}
+
+.cases_btn{
+  margin: 0 auto;
+}

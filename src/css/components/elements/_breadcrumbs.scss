@@ -1,0 +1,25 @@
+.breadcrumbs{
+  padding-top: 14rem;
+  margin-bottom: 4rem;
+
+  @include tablet{
+    display: none;
+  }
+
+  @include phone {
+    display: none;
+  }
+}
+
+.breadcrumbs-wrap{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.breadcrumbs_link{
+  color: $black;
+
+  &:hover{
+    color: $violet
+  }
+}

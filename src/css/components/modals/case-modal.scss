@@ -1,0 +1,146 @@
+.modal-case {
+    background-color: rgba($black, 0.5);
+
+    &.modal-active {
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+    }
+
+
+    .modal {
+        background-color: $white;
+        padding: 2rem;
+        width: auto;
+        height: auto;
+        max-width: 126rem;
+
+        @include tablet {
+            max-width: 100%;
+            height: 65%;
+        }
+
+        @include phone {
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+
+    .modal-content {
+        display: flex;
+        gap: 2rem;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        .text3 {
+            margin-bottom: 1.6rem;
+        }
+
+        & p {
+            color: $black;
+        }
+    }
+
+    .modal-content_text-wrapper {
+        max-width: 40rem;
+
+        & p {
+            max-height: 20rem;
+            overflow-y: auto;
+
+            @include tablet{
+                max-height: 9rem;
+            }
+        }
+    }
+
+    .modal-content_logo {
+        width: 16rem;
+        height: 6.4rem;
+        margin-bottom: 1.2rem;
+        object-fit: cover;
+    }
+
+    .modal-header {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .cases_item-tag-wrapper {
+        margin-bottom: 2.8rem;
+
+
+    }
+
+    .modal-slider-case {
+        max-width: 80rem;
+        max-height: 60rem;
+
+        @include tablet {
+            max-width: 31.5rem;
+            max-height: 26.1rem;
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    .modal-slider-case_slide {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    }
+
+    & .modal-slider-case_buttons-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .modal-slider-case_pagination {
+        display: none;
+
+        @include tablet {
+            display: block;
+            bottom: 0 !important;
+        }
+    }
+
+    & .swiper-nav-button {
+        @include tablet {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+
+    & .modal-slider-case-next {
+        transform: rotate(180deg);
+    }
+    
+    & .swiper-button-disabled{
+        opacity: 0.6;
+        pointer-events: none;
+        &:hover{
+            background-color: $dark_violet;
+        }
+    }
+}

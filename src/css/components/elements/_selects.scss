@@ -1,0 +1,131 @@
+.select {
+  position: relative;
+
+  &_choose {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: $white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all $duration;
+
+    & svg {
+      width: 1.6rem;
+      height: 1.8rem;
+    }
+
+    &:hover {
+      color: $light_violet;
+
+      & svg {
+        & path {
+          fill: $light_violet;
+        }
+      }
+    }
+
+    @include phone {
+      justify-content: space-between;
+      padding: 1.2rem 2rem;
+      background-color: $violet;
+    }
+  }
+
+  &_dropdown {
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    width: fit-content;
+    max-height: 29.6rem;
+    padding: 0.4rem 0;
+    border-radius: 0.5rem;
+    background-color: $white;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $duration;
+    transform: translateX(-50%);
+
+    & li {
+      padding: 0.6rem 1rem 0.6rem 1rem;
+      cursor: pointer;
+      transition: all $duration;
+
+      &:hover {
+        background-color: $white;
+        color: $violet;
+      }
+    }
+
+    &::-webkit-scrollbar{
+      width: 0.2rem;
+      margin-right: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar-thumb{
+      background-color: $violet;
+      border-radius: 1rem;
+    }
+  }
+
+  &__open {
+    & .select_dropdown {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+  }
+
+  &__secondary {
+    .select_choose {
+      background-color: $white;
+      color: $black;
+
+      & svg {
+        & path {
+          fill: $black;
+        }
+      }
+
+      &:hover {
+        color: $dark_violet;
+
+        & svg {
+
+          & path {
+            fill: $dark_violet;
+          }
+        }
+      }
+    }
+
+    .select_dropdown {
+
+      & li {
+        background-color: $white;
+        color: $black;
+
+        &:hover {
+          background-color: $dark_violet;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.select-filter{
+  align-items: center;
+  height: max-content;
+  width: rem(282);
+  padding: rem(20) rem(10);
+  // border-bottom: rem(1) solid $grey;
+  justify-content: center;
+}

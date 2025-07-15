@@ -1,0 +1,40 @@
+#modal-success {
+
+  .modal {
+    gap: 0;
+    background-color: $violet;
+  }
+
+  .modal-wrapper {
+    margin-top: 8.6rem;
+    @include phone {
+      justify-content: center;
+      margin-top: 0;
+    }
+  }
+
+  .modal-title {
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  .modal-text {
+    text-align: center;
+  }
+
+  .modal_image-success {
+    width: 40rem;
+    height: 25.6rem;
+
+    @include phone {
+      width: 34.5rem;
+      height: 22rem;
+    }
+  }
+
+  .modal-btn{
+    @include phone {
+      margin-top: auto;
+    }
+  }
+}

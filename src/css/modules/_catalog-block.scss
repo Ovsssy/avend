@@ -1,0 +1,43 @@
+.catalog-block {
+  margin-bottom: 12rem;
+
+  @include phone {
+    margin-bottom: 10rem;
+  }
+}
+
+.catalog-block_title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.catalog-block_text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  @include phone {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.catalog-block_link {
+  color: $black;
+  @include underline;
+  transition: color $duration;
+
+  &:hover {
+    color: $violet;
+  }
+}
+
+.catalog-block_list {
+  grid-template-columns: repeat(4, 1fr) !important;
+  grid-column-gap: 2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

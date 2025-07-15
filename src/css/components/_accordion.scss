@@ -1,0 +1,239 @@
+.accordion-item{
+    width: 100%;
+    .accordion-content{
+        padding: 1rem 0;
+        cursor: pointer;
+        background: $white;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        .accordion-title{
+            .title-wrapp{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                .title{
+                    font-size: 2.8rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 130%;
+                    width: 86.5rem;
+                    @include phone{
+                        font-size: 2.2rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 110%;
+                    }
+
+                }
+            }
+            .icon{
+                transition: all .3s;
+                svg{
+
+                    path{
+                        transition: all .7s;
+                        &:last-child{
+                            //opacity: 0;
+                            transform: rotate(0deg);
+                            transform-origin: center;
+                        }
+                    }
+                }
+                &.rotate{
+                    svg{
+
+                        rect{
+                            fill: #000;
+                        }
+
+                        path{
+                            transition: all .7s;
+                            &:last-child{
+                                //opacity: 0;
+                                transform: rotate(-180deg);
+                                transform-origin: center;
+                            }
+                        }
+                    }
+                }
+                svg{
+                    width: 1.6rem;
+                    height: 1.8rem;
+                    flex-shrink: 0;
+                    transition: all .4s;
+                    transform: rotate(0deg);
+                    path{
+                        transition: all .4s;
+                    }
+                }
+            }
+        }
+        .accordion-includes{
+            display: none;
+            margin-top: 1.7rem;
+            &.active{
+                display: block;
+            }
+            .desc-acc{
+                // font-size: 1.6rem;
+                // font-style: normal;
+                // font-weight: 400;
+                // line-height: 125%;
+                ul{
+                    list-style-type: disc;
+                    margin-left: 2rem;
+                    li{
+                        list-style-type: disc;
+                    }
+                }
+                .combination-card{
+                    padding: 1.5rem;
+                    border-radius: 0.4rem;
+                    background: #F2F2F2;
+                    gap: 1.7rem;
+                    img{
+                        width: 7.2rem;
+                        height: 7.1rem;
+                    }
+                    .info{
+                        gap: 0.3rem;
+                        span{
+                            font-weight: 600;
+                            font-size: 1.6rem;
+                            line-height: 130%;
+                            &:last-child{
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+                .img-wrapp-sert{
+
+                    @include phone{
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 1.8rem;
+                    }
+
+                    img{
+                        width: 24rem;
+                        height: 36.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.accordion2 {
+    details {
+        position: relative;
+        border-radius: 4px;
+        background-color: $white;
+        color: $black;
+
+        summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 2.3rem 3rem;
+            user-select: none;
+            cursor: pointer;
+
+            &::marker, &::-webkit-details-marker {
+                display: none;
+            }
+        }
+
+        &.open {
+            .accordion2__chevron-box {
+                transform: rotate(180deg);
+            }
+
+            & + hr {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__item {
+        margin-top: 0.8rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__chevron {
+        &-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            position: relative;
+            width: 4.6rem;
+            height: 4.8rem;
+            margin-left: 2rem;
+            border-radius: 50%;
+            background-color: transparent;
+            transform: rotate(0);
+            transition: transform $duration*2;
+        }
+
+        &-elem {
+            filter: invert(1);
+        }
+    }
+
+    &__content {
+        padding: 3.5rem;
+        padding-top: 0;
+        color: black;
+
+        h3 {
+
+        }
+        p, li {
+
+        }
+    }
+
+    &__border {
+        margin: 0;
+        margin-top: 0;
+        border: none;
+        height: 1px;
+        background-color: rgba(142, 142, 142, 0.30);
+        transition: margin 0.5s;
+    }
+}
+
+@include phone {
+    .accordion2 {
+        details {
+            summary {
+                padding: 2rem 1.6rem;
+                font-size: 1.6rem;
+                line-height: 1.4;
+            }
+        }
+
+        &__chevron {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-left: 1.5rem;
+        }
+
+        &__content {
+            padding: 2rem;
+            padding-top: 0;
+        }
+    }
+}

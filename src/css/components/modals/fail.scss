@@ -1,0 +1,49 @@
+#modal-fail {
+  .modal{
+
+  }
+
+  .modal-title {
+    margin-bottom: 2.4rem;
+    text-align: center;
+
+    @include phone {
+      font-size: 3.2rem;
+    }
+  }
+
+  .modal-text {
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+
+  .modal-btn_contact{
+    margin-bottom: 0.8rem;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  .modal-btn_contact span{
+    & img {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-top: -0.4rem;
+    }
+  }
+
+  .modal-wrapper{
+    justify-content: space-between;
+  }
+
+  & .btn {
+    margin-top: auto;
+  }
+
+  .modal-header{
+    @include phone {
+      margin-bottom: 18.15rem;
+    }
+  }
+}

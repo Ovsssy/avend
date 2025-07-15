@@ -1,0 +1,46 @@
+// // base
+@import "base/reset.scss";
+@import "utils/functions";
+@import "utils/mixin.scss";
+@import "utils/vars.scss";
+@import "utils/links";
+@import "base/typography";
+@import "base/global.scss";
+@import "base/flex";
+
+// // components
+@import "components/elements/buttons";
+@import "components/elements/selects";
+@import "components/elements/inputs";
+@import "components/accordion";
+@import "components/modal-base";
+@import "components/modals/success";
+@import "components/modals/fail";
+@import "components/modals/form";
+@import "components/modals/person";
+@import "components/modals/cookie";
+@import "components/modals/case-modal.scss";
+@import "components/contact-form";
+@import "components/swiper";
+@import "components/elements/breadcrumbs";
+
+// // modules
+@import "modules/header";
+@import "modules/footer";
+@import "modules/hero-section";
+@import "modules/about-company";
+@import "modules/built-modules";
+@import "modules/categories";
+@import "modules/features";
+@import "modules/cases";
+@import "modules/reviews";
+@import "modules/form";
+@import "modules/contacts-block";
+@import "modules/catalog-block";
+
+// pages
+@import "pages/ui";
+@import "pages/card";
+@import "pages/404";
+@import "pages/privacy-policy";
+@import "pages/catalog";

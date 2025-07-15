@@ -1,0 +1,122 @@
+.about-company {
+  margin-bottom: 12rem;
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phone {
+    margin-bottom: 10rem;
+  }
+}
+
+.about-company_title {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 83.2rem;
+
+  & br:nth-child(2) {
+    display: none;
+
+    @include phone {
+      display: block;
+    }
+  }
+
+  @include phone {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.about-company_content-wrapper {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  @include phone {
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-bottom: 3.2rem;
+    max-width: 100%;
+  }
+}
+
+.about-company_list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-company_item {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 2rem 2rem 2.8rem 0;
+  background-color: $light_gray;
+  border-radius: 0.5rem;
+
+  @include phone {
+    padding: 1.6rem 2rem 1.6rem 0;
+    gap: 2rem;
+  }
+}
+
+.about-company_item-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 7.2rem;
+  height: 4.8rem;
+  padding: 0.8rem 0;
+  text-align: center;
+  color: $white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: $gray;
+
+  @include phone {
+    align-self: flex-start;
+    min-width: 5rem;
+    height: 3.1rem;
+    padding: 0;
+  }
+}
+
+.about-company_slider{
+  max-width: 61rem;
+
+  @include tablet {
+    max-width: 100%;
+  }
+
+  .swiper-wrapper {
+    max-height: 44rem;
+  }
+
+  .swiper-slide {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .about-company_slider-pagination{
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.about-company_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+
+  @include tablet {
+    width: 45rem;
+  }
+
+  @include phone {
+    width: 34.5rem;
+    height: 24rem;
+  }
+}

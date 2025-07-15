@@ -1,0 +1,82 @@
+.contact-form {
+  &__input-wrapper {
+    margin-top: 0.8rem;
+  }
+
+  &__extra {
+    margin-top: 1.5rem;
+  }
+
+  &__file-picker {
+    margin-top: 0.8rem;
+
+    @include phone {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__submit-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+
+    @include phone {
+      flex-direction: column;
+    }
+
+    & > * {
+      flex: 1;
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+    }
+
+    .contact-form {
+      &__extra {
+        margin-top: 0.8rem;
+
+        @include phone {
+          margin-top: 1.5rem;
+        }
+      }
+    
+      &__submit-wrapper {
+        margin-top: 0.8rem;
+
+        @include phone {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+
+
+
+  &--subscribe {
+    .contact-form {
+      &__input-wrapper {
+        @include phone {
+          order: 1;
+        }
+      }
+      &__submit-wrapper {
+        @include phone {
+          order: 3;
+        }
+      }
+      &__extra {
+        width: 100%;
+        flex: 0 1 auto;
+
+        @include phone {
+          order: 2;
+        }
+      }
+    }
+  }
+}

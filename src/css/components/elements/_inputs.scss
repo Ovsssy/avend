@@ -1,0 +1,202 @@
+// text, email, tel fields
+.wpcf7-form-control-wrap {
+  display: block;
+  position: relative;
+
+  textarea {
+    height: 7.1rem;
+    padding-top: 1.8rem;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.285;
+  // color: $red;
+}
+
+// checkbox
+input[type=checkbox] {
+  vertical-align: middle;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0;
+  line-height: 1;
+  appearance: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url('../../static/img/checkbox-off.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.1s;
+  }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:checked::before {
+    background-image: url('../../static/img/checkbox-on.svg');
+  }
+
+  &+.wpcf7-list-item-label {
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+
+input[type="submit"] {
+  width: 100%;
+}
+
+// Сам инпут не нужен
+input[type=file] {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -9999px;
+  z-index: -1;
+}
+
+.input {
+  padding: 1.6rem 1rem;
+  border-radius: 0.5rem;
+  transition: all $duration;
+
+  &:hover {
+    background-color: $light_gray;
+  }
+
+  &:focus,
+  &:active {
+    color: $black;
+    outline: 0.1rem solid $black !important;
+    background-color: $white;
+  }
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  @include phone {
+    padding: 1.45rem 1rem;
+  }
+}
+
+.input__error {
+  background-color: $white;
+  outline: 0.1rem solid $error;
+
+  &::placeholder {
+    color: $error;
+  }
+}
+
+.text-error {
+  margin-top: 0.8rem;
+  color: $error;
+}
+
+.wpcf7-spinner {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
+.wpcf7-mask::placeholder {
+  opacity: 0;
+}
+
+// input[type=range]  {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+// }
+
+.input-wrapp {
+  position: relative;
+  padding: 1rem 0;
+
+  &.checkbox-wrapp {
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label {
+      span {
+        padding-left: 3rem;
+      }
+
+      &:before {
+        content: "";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background: $white;
+        background-position: center;
+        border-radius: 0.2rem;
+        border: 0.2rem solid $dark_violet;
+        margin-right: 1rem;
+        cursor: pointer;
+        transition: all .4s;
+        color: $white;
+      }
+    }
+
+    input:checked+label:before {
+      content: "";
+      background: $dark_violet;
+      background-image: url('../static/img/checkmark.svg');
+      background-size: 100%;
+    }
+  }
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=range] {
+  &::-webkit-slider-runnable-track {
+    height: 0.2rem;
+    background: $gray;
+  }
+
+  &::-webkit-slider-thumb {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: $white;
+    border-radius: 50%;
+    border: 0.2rem solid $gray;
+    background-color: $light_gray;
+    -webkit-appearance: none;
+    top: -1.1rem;
+    position: relative;
+  }
+}

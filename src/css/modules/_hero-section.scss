@@ -1,0 +1,133 @@
+.hero-section {
+  position: relative;
+  margin-bottom: 12rem;
+  color: $white;
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55.6rem;
+    padding: 16rem 0 0 0;
+
+    @include phone {
+      padding: 0 1.5rem;
+      padding-top: 11.2rem;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark_violet;
+    clip-path: polygon(0 0, 100% 0, 100% 58.8%, 0 86.8%);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 36.8rem;
+    left: 50%;
+    width: 100%;
+    max-width: 137.4rem;
+    height: 0.1rem;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FFF 48.5%, rgba(255, 255, 255, 0.00) 100%);
+    transform: rotate(-9deg) translateX(-50%);
+    z-index: 0;
+
+    @media (min-width: 1920px) {
+      bottom: 34.8rem;
+      transform: rotate(-7deg) translateX(-50%);
+    }
+  }
+
+  @media (min-width: 1701px) and (max-width: 1919px) {
+    &::after {
+      bottom: 34.8rem;
+      transform: rotate(-7deg) translateX(-50%);
+    }
+  }
+
+  @media (min-width: 1550px) and (max-width: 1700px) {
+    &::after {
+      bottom: 34.8rem;
+      transform: rotate(-8.4deg) translateX(-50%);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    &::after {
+      bottom: 37rem;
+      max-width: 758rem;
+      transform: rotate(-13.4deg) translateX(-50%);
+    }
+  }
+
+  @media (min-width: 500px) and (max-width: 767px) {
+    &::before {
+      clip-path: polygon(0 0, 100% 0, 100% 75.8%, 0 85.8%);
+    }
+
+    &::after {
+      bottom: 15.5rem;
+      max-width: 47rem;
+      transform: rotate(-5.4deg) translateX(-50%);
+    }
+  }
+
+  @media (max-width: 499px) {
+    margin-bottom: 10rem;
+
+    &::before {
+      clip-path: polygon(0 0, 100% 0, 100% 78.5%, 0 87.5%);
+    }
+
+    &::after {
+      bottom: 16.6rem;
+      max-width: 36.5rem;
+      transform: rotate(-9.4deg) translateX(-50%);
+    }
+  }
+}
+
+.hero-section_title {
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+
+.hero-section_description {
+  margin-bottom: 3.2rem;
+  text-align: center;
+
+  @include phone {
+    & br {
+      display: none;
+    }
+  }
+}
+
+.hero-section_btn {
+  margin-bottom: 5rem;
+
+  @include phone {
+    width: 100%;
+    margin-bottom: 5.6rem;
+  }
+}
+
+.hero-section_image {
+  position: relative;
+  width: 39.3rem;
+  height: 38rem;
+  z-index: 1;
+
+  @include phone {
+    width: 26.3rem;
+    height: 25.6rem;
+  }
+}

@@ -1,0 +1,125 @@
+#modal-cookie {
+  top: auto;
+  bottom: 0;
+  height: auto;
+
+  .modal-shadow {
+    display: none;
+  }
+
+  .modal {
+    top: auto;
+    bottom: 5rem;
+    left: 50%;
+    max-width: 124rem;
+    width: 100%;
+    height: auto;
+    gap: 3rem;
+    padding: 3rem;
+    background-color: $light_violet;
+    color: $black;
+    transform: translateX(-50%);
+
+    @include tablet {
+      max-width: 74rem;
+    }
+
+    @include phone {
+      bottom: 2rem;
+      max-width: 34.4rem;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  }
+
+  .modal-header {
+    justify-content: space-between;
+
+    @include phone {
+      gap: 1.1rem;
+    }
+  }
+
+  .modal-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    position: static;
+    height: auto;
+    padding: 0;
+  }
+
+  .modal-cross {
+    display: block;
+    min-width: 4rem;
+    min-height: 4rem;
+  }
+
+  .modal-content{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+      gap: 2rem;
+    }
+    
+    & p {
+      color: $black;
+    }
+
+    @include tablet {
+      gap: 3rem;
+    }
+  }
+
+  .modal-text {
+    width: 97rem;
+    margin-top: 0;
+    margin-right: 22.6rem;
+    color: $white;
+
+    & a {
+      @include underline
+    }
+
+    @include phone {
+      width: 28.5rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .cookie-link{
+    color: $black;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    &:hover{
+      color: $dark_violet
+    }
+  }
+
+  .btn{
+    background-color: $violet;
+    padding: 1.6rem 2.6rem;
+
+    &:hover {
+      background-color: $dark_violet;
+    }
+
+    @include tablet {
+      width: fit-content;
+      padding: 1.6rem 3.5rem;
+    }
+    &.modal-cross{
+      width: auto;
+      height: auto;
+      min-width: unset;
+      min-height: auto;
+    }
+  }
+}

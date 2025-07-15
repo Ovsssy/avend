@@ -1,0 +1,137 @@
+.categories {
+  margin-bottom: 12rem;
+
+  @include phone {
+    margin-bottom: 10rem;
+  }
+}
+
+.categories_title {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 48rem;
+  justify-self: center;
+
+  @include phone {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.categories_machines-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include phone {
+    gap: 1.6rem;
+  }
+}
+
+.categories_machine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10.2rem;
+  border-radius: 1rem;
+  background-color: $light_gray;
+
+  &:nth-child(2){
+    & br:first-child{
+      display: none;
+    }
+  }
+
+  @include phone {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 0;
+
+    &:nth-child(2){
+      & br:first-child{
+        display: block;
+      }
+
+      & br:last-child{
+        display: none;
+      }
+    }
+  }
+}
+
+.categories_machine-content {
+  display: flex;
+  flex-direction: column;
+  width: 50.5rem;
+
+  @include phone {
+    padding: 2.8rem 2rem 3.2rem 2rem;
+    width: auto;
+  }
+}
+
+.categories_machine-title {
+  margin-bottom: 1.2rem;
+
+  @include phone {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.categories_machine-text {
+  margin-bottom: 2.4rem;
+  color: $gray;
+
+  @include phone {
+    margin-bottom: 2rem;
+  }
+}
+
+.categories_machine-link {
+  @include underline;
+}
+
+.categories_machine-image {
+  position: relative;
+  width: 37.2rem;
+  height: 26rem;
+  overflow: hidden;
+
+  & img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 1rem 1rem 0;
+    background-color: $light_violet;
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 0;
+  }
+
+  @include phone {
+    width: 100%;
+    height: 20rem;
+
+    & img {
+      position: absolute;
+      width: 28rem;
+      height: auto;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      border-radius: 1rem 1rem 0 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+}

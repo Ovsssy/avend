@@ -1,0 +1,116 @@
+.swiper-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+
+  @include phone {
+    margin-top: 1.6rem;
+  }
+}
+
+.swiper-timeline-block {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.swiper-timeline {
+  position: relative;
+  width: 33.6rem;
+  // background: $color_gray;
+  height: 0.4rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  @include phone {
+    width: 17.8rem;
+  }
+
+  & .swiper-progress {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    // background: $primary;
+    transition: all $duration;
+  }
+}
+
+.swiper-nav-block {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+.swiper-nav-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: $dark-violet;
+  cursor: pointer;
+  transition: all $duration;
+
+  &:hover {
+    background-color: $violet;
+
+    &::before {
+      border-left-color: $white;
+      border-bottom-color: $white;
+    }
+  }
+
+  @include phone {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-left: 0.5rem;
+    transform: rotate(45deg);
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $white;
+    transition: all $duration;
+  }
+
+  &.reviews_swiper-button-next {
+    &:before {
+      margin-left: -0.6rem;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background-color: $dark-violet;
+  opacity: 1;
+  transition: width $duration;
+}
+
+.swiper-pagination-bullet-active {
+  width: 3rem;
+  background-color: $violet;
+}
+
+@keyframes timeline {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}

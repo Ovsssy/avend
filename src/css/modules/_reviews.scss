@@ -1,0 +1,75 @@
+.reviews {
+  margin-bottom: 12rem;
+
+  @include phone {
+    margin-bottom: 10rem;
+  }
+}
+
+.reviews_title {
+  margin-bottom: 4rem;
+  text-align: center;
+
+  @include phone {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.reviews_slider {
+  position: relative;
+  max-width: 83.1rem;
+  padding: 0 8rem;
+
+  @include phone {
+    max-width: 100%;
+    padding: 0;
+    padding-bottom: 3.2rem;
+  }
+}
+
+.reviews_slide {
+  padding: 4rem 8.4rem;
+  background-color: $light_violet;
+  clip-path: polygon(4.5% 0, 100% 0, 96% 100%, 0% 100%);
+
+  & img {
+    width: auto;
+    height: 2rem;
+    margin-bottom: 1.6rem;
+    object-fit: cover;
+  }
+
+  @include phone {
+    padding: 2rem;
+    padding-top: 2.8rem;
+    clip-path: polygon(4.5% 0, 100% 0, 96% 100%, 0% 100%);
+
+    & img {
+      height: 3rem;
+    }
+  }
+}
+
+.reviews_slider-buttons-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  @include phone {
+    display: none;
+  }
+}
+
+.reviews_pagination {
+  display: none;
+
+  @include phone {
+    display: block;
+    bottom: 0 !important;
+  }
+}

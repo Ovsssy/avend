@@ -1,0 +1,277 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 8rem;
+  background: $dark_violet;
+
+  & .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: 144rem;
+    background: $dark_violet;
+    border-bottom: 1px solid var(--Gradient-2, rgba(255, 255, 255, 0.00));
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -0.1rem;
+      width: 100%;
+      height: 0.1rem;
+      background: linear-gradient(270deg, rgba(255, 255, 255, 0.00) 0%, #FFF 48.5%, rgba(255, 255, 255, 0.00) 100%);
+    }
+  }
+
+  & address {
+    font-weight: 600;
+  }
+
+  @include tablet {
+    height: 6rem;
+
+    & .wrapper {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.header_nav {
+  margin-left: auto;
+  margin-right: 8rem;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header_nav-list {
+  display: flex;
+  gap: 4rem;
+}
+
+.header_info {
+  display: flex;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header_select {
+  @include tablet {
+    display: none;
+  }
+}
+
+.header_burger {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border $duration ease-in-out;
+
+    & span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: $white;
+      border-radius: 5rem;
+      transition: all $duration ease-in-out;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: $white;
+        left: 0;
+        top: -7px;
+        border-radius: 5rem;
+        transition: all $duration ease-in-out;
+      }
+
+      &:after {
+        top: 7px;
+      }
+    }
+  }
+}
+
+.header_burger__active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & span {
+    transform: rotate(-45deg);
+
+    &:after {
+      transform: rotate(-90deg);
+      top: 0;
+    }
+
+    &:before {
+      opacity: 0;
+    }
+  }
+}
+
+.header_mobile-menu {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: all $duration;
+
+  & .wrapper {
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@include tablet {
+  .header_mobile-menu__open {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    height: calc(100vh - 6rem);
+  }
+
+  .header_mobile-menu-nav {
+
+    & ul{
+      flex-direction: column-reverse;
+    }
+
+    & .menu-item a {
+      font-family: $second-ff;
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 100%;
+
+      @include phone {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .header_mobile-menu-nav-list {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .header_mobile-menu-select {
+    width: 100%;
+  }
+
+  .header_mobile-menu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: auto;
+
+    & .link span {
+      @include underline;
+    }
+
+    & .address {
+      align-items: center;
+    }
+
+    & .address span {
+      font-weight: 600;
+      text-align: center;
+      max-width: 27.6rem;
+      @include underline;
+    }
+  }
+}
+
+.header-white {
+  background-color: $white;
+
+  .wrapper {
+    background-color: $white;
+
+    &::after {
+      background: linear-gradient(90deg, rgba(80, 43, 119, 0.00) 0%, rgba(80, 43, 119, 0.60) 50%, rgba(80, 43, 119, 0.00) 100%);
+    }
+
+    & a,
+    span {
+      color: $black;
+    }
+
+    & a {
+      &:hover {
+        color: $dark_violet;
+
+        & span {
+          color: $dark_violet;
+        }
+
+        & svg {
+          & path {
+            fill: $dark_violet;
+          }
+        }
+      }
+    }
+  }
+
+  & .header_burger {
+    & span {
+      background-color: $black;
+
+      &::before,
+      &::after {
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.menu-item {
+  & a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    
+    &:hover, &:active {
+      color: $light_violet;
+    }
+
+    @include phone {
+      &:hover {
+        color: $white;
+      }
+    }
+  
+    &.active {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+      color: $light_violet;
+    }
+  }
+}

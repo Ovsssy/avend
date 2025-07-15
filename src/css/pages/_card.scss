@@ -1,0 +1,324 @@
+.card {
+  .info-product {
+    margin-bottom: 12rem;
+
+    @include phone {
+      margin-bottom: 10rem;
+      padding-top: 9.2rem;
+    }
+
+    .info-product-wrapp {
+      gap: 2rem;
+
+      @include phone {
+        flex-direction: column;
+      }
+
+      .left {
+        background: $white;
+
+        .info-product_title__mobile {
+          display: none;
+
+          @include phone {
+            display: block;
+
+            &.title {
+              margin-bottom: 1.6rem;
+            }
+
+            &.title2 {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+
+        .img-wrapp {
+          width: 50.5rem;
+          gap: 1rem;
+          overflow: hidden;
+
+          @include phone {
+            width: 100%;
+          }
+        }
+
+        .mainSwiperTumb {
+          height: 65rem;
+
+          @include phone {
+            margin-bottom: 1rem;
+            height: auto;
+          }
+
+          .swiper-slide {
+            width: 50.5rem;
+            height: 65rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $white;
+            cursor: pointer;
+
+            img {
+              width: auto;
+              height: 60.6rem;
+              object-fit: cover;
+            }
+
+            @include phone {
+              width: 100%;
+              height: 44.4rem;
+
+              & img {
+                height: 41.4rem;
+              }
+            }
+          }
+        }
+
+        .swiperTumb2 {
+          max-width: 50.5rem;
+
+          height: 15.5rem;
+
+          @include phone {
+            height: 9.7rem;
+          }
+
+          .swiper-slide {
+            min-width: 12rem;
+            height: 100%;
+            border-radius: 0.5rem;
+            cursor: pointer;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 0.5rem;
+              object-fit: cover;
+            }
+
+            @include phone {
+              min-width: 7.5rem;
+            }
+          }
+
+          .swiper-slide-thumb-active {
+            border: 0.2rem solid $dark_violet;
+          }
+        }
+      }
+
+      .right {
+        gap: 4rem;
+        width: 100%;
+
+        .top {
+          gap: 1.6rem;
+
+          @include phone {
+            display: none;
+          }
+        }
+
+        .btn {
+          margin-top: 1.4rem;
+          text-align: center;
+
+          @include phone {
+            margin-top: -1.2rem;
+          }
+        }
+
+        .info-product_title__desk {
+          display: block;
+
+          @include phone {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .product-desc {
+    margin-bottom: 6rem;
+
+    @include phone {
+      margin-bottom: 10rem;
+    }
+
+    & p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: normal;
+
+      @include phone {
+        font-size: 1.4rem;
+      }
+    }
+
+    .product-desc-wrapp {
+      gap: 2rem;
+
+      @include phone {
+        flex-direction: column;
+      }
+
+      .left {
+        gap: 2rem;
+        width: auto;
+
+        @include phone {
+          gap: 1.6rem;
+        }
+
+        .parameters {
+          margin-top: 2rem;
+
+          @include phone {
+            margin-top: 1.2rem;
+          }
+        }
+      }
+
+      .right {
+        width: 50.5rem;
+        height: 55.6rem;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include phone {
+          width: 100%;
+          height: 25rem;
+        }
+      }
+    }
+  }
+
+  .assortment {
+    margin-bottom: 12rem;
+
+    @include phone {
+      margin-bottom: 10rem;
+    }
+  }
+
+  .assortment_title {
+    margin-bottom: 4rem;
+
+    @include phone {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .assortment_content-wrapper {
+    display: flex;
+    gap: 2rem;
+
+    @include phone {
+      gap: 1.5rem;
+    }
+  }
+
+  .assortment_column-title {
+    margin-bottom: 2rem;
+
+    @include phone {
+      margin-bottom: 1.35rem;
+    }
+  }
+
+  .assortment_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 29.5rem;
+
+    @include phone {
+      min-width: 16.4rem;
+      gap: 1.1rem;
+    }
+  }
+
+  .assortment_list-item {
+    position: relative;
+    padding-left: 2.5rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      width: 2rem;
+      height: 2rem;
+      background-image: url('../static/img/marker.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .payment {
+    margin-bottom: 10.8rem;
+
+    @include phone {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  .payment_title {
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @include phone {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  .payment_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+  }
+
+  .payment_list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    padding: 2rem 2rem 2.8rem 2rem;
+    border-radius: 0.5rem;
+    background-color: $light_gray;
+
+    @include phone {
+      gap: 1.2rem;
+      padding: 1.6rem 2rem;
+    }
+  }
+
+  .form-block {
+    margin-bottom: 0;
+  }
+}
+
+.parameters-wrapp {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.parameters_grow {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  border-bottom: 0.1rem dotted $dark_violet;
+}
